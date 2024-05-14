@@ -15,8 +15,15 @@ router.get('/:id', (req, res, next) =>{
 });
 
 router.post('/', (req, res, next) =>{
+
+    const user = {
+        name: req.body.name,
+        password: req.body.password
+    }
+
     res.status(201).send({
-        Status: "/User Post Ok"
+        Status: "/User Post Ok",
+        Body: user
     });
 });
 
