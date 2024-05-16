@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const mysql = require('../mysql').pool;
 
 router.get('/', (req, res, next) => {
     res.status(200).send({
@@ -17,13 +18,11 @@ router.get('/:id', (req, res, next) =>{
 router.post('/', (req, res, next) =>{
 
     const user = {
-        name: req.body.name,
-        password: req.body.password
+        
     }
 
     res.status(201).send({
-        Status: "/User Post Ok",
-        Body: user
+        Status: "/User Post Ok"
     });
 });
 

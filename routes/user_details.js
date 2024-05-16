@@ -15,8 +15,14 @@ router.get('/:id', (req, res, next) =>{
 });
 
 router.post('/', (req, res, next) =>{
+
+    const userD = {
+
+    }
+
     res.status(201).send({
-        Status: "/UserD Post Ok"
+        Status: "/UserD Post Ok",
+        Body: userD
     });
 });
 

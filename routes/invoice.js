@@ -15,8 +15,14 @@ router.get('/:id', (req, res, next) =>{
 });
 
 router.post('/', (req, res, next) =>{
+
+    const invoice = {
+
+    }
+
     res.status(201).send({
-        Status: "/Invoice Post Ok"
+        Status: "/Invoice Post Ok",
+        Body: invoice
     });
 });
 
